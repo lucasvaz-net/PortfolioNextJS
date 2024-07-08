@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'animate.css';
+
+@import url('https://fonts.cdnfonts.com/css/qanelas');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,17 +22,134 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+  color: black;
+  font-family: 'Nunito', sans-serif; /* Certifique-se de usar a fonte importada */
+  margin: 0;
+  padding: 0;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Estilo para Projetos */
+.projetos-carousel .carousel .slide {
+  display: flex;
+  justify-content: center;
+}
+
+.projetos-carousel .carousel .control-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.projetos-carousel .carousel .slider-wrapper {
+  padding-bottom: 40px; /* Adicione espaço extra na parte inferior */
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+@media (max-width: 640px) {
+  .projetos-carousel .carousel .slide {
+    flex: 0 0 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .projetos-carousel .carousel .slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projetos-carousel .carousel .slide {
+    flex: 0 0 25%;
+  }
+}
+
+/* Estilo para Experiencias */
+.experiencias-carousel .carousel .slide {
+  display: flex;
+  justify-content: center;
+}
+
+.experiencias-carousel .carousel .control-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.experiencias-carousel .carousel .slider-wrapper {
+  padding-bottom: 40px; /* Adicione espaço extra na parte inferior */
+}
+
+@media (max-width: 640px) {
+  .experiencias-carousel .carousel .slide {
+    flex: 0 0 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .experiencias-carousel .carousel .slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .experiencias-carousel .carousel .slide {
+    flex: 0 0 25%;
+  }
+}
+
+/* Estilo para Estudos */
+.estudos-carousel .carousel .slide {
+  display: flex;
+  justify-content: center;
+}
+
+.estudos-carousel .carousel .control-arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.estudos-carousel .carousel .slider-wrapper {
+  padding-bottom: 40px; /* Adicione espaço extra na parte inferior */
+}
+
+@media (max-width: 640px) {
+  .estudos-carousel .carousel .slide {
+    flex: 0 0 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .estudos-carousel .carousel .slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .estudos-carousel .carousel .slide {
+    flex: 0 0 25%;
+  }
+}
+
+/* Garantir que as imagens dos ícones não fiquem distorcidas */
+.object-contain {
+  object-fit: contain;
 }
